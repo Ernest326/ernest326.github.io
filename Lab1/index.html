@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomadoro Timer</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="navigation" style="display:flex; justify-content: space-evenly; align-items: flex-start; background-color: white;"><a href="index.html">Lab 1</a></div>
+    <div id="timer-canvas">
+            <div id="apple">
+                <p id="timer"><b>25:00</b></p>
+                <svg width="200" height="200">
+                    <rect width="5" height="100" x="100" y="0" fill="green"/>
+                    <circle cx="80" cy="100" r="60" fill="red"/>
+                    <circle cx="120" cy="100" r="60" fill="red"/>
+                </svg>
+            </div>
+            <div id="buttons">
+                <button class="button" id="start" onclick="startTimer()">Start</button>
+                <button class="button" id="stop" onclick="stopTimer()">Stop</button>
+                <button class="button" id="pause" onclick="pauseTimer()">Pause</button>
+            </div>
+
+    </div>
+</body>
+</html>

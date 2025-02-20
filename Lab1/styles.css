@@ -1,0 +1,57 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+}
+
+#timer-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#timer {
+    color: white;
+    font-size: 32px;
+    font-family: 'Roboto', Courier, monospace;
+    position: fixed;
+    width: 100px;
+    height: 30px;
+    margin: 2.5em;
+    text-align: center;
+}
+
+#apple {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+#timer:hover {
+    color: yellow;
+}
+
+.button {
+    color: white;
+    font-size: 24px;
+    font-family: 'Roboto', Courier, monospace;
+    width: 100px;
+    border-style: dashed;
+}
+
+.button:hover {
+    border-color: black;
+}
+
+#start {
+    background-color: green;
+}
+
+#stop {
+    background-color: red;
+}
+
+#pause {
+    background-color: yellow;
+}
