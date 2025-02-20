@@ -18,13 +18,18 @@ function stopTimer() {
     timer_running = false;
     time = 25*60;
     document.getElementById("timer").innerHTML = "<b>25:00</b>";
-    document.getElementById("timer").setAttribute('style', '')
+    document.getElementById("timer").setAttribute('style', '');
+    document.getElementById("pause").innerHTML = "Pause";
 }
 
 function updateTimer() {
     if(timer_running && time>0) {
         time--;
-        document.getElementById("timer").innerHTML = "<b>"+Math.floor(time/60) + ":" + time%60+"</b>";
+        seconds = time%60;
+        if(seconds < 10) {
+            seconds = '0'+seconds;
+        }
+        document.getElementById("timer").innerHTML = "<b>"+Math.floor(time/60) + ":" + seconds + "</b>";
 
         if(time==60) {
             document.getElementById("timer").setAttribute('style', 'color:red; background-color: white; border-radius: 5px')

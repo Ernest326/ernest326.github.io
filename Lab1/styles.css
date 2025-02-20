@@ -1,6 +1,7 @@
 body {
     background-color: lightblue;
     margin: 0;
+    overflow: hidden;
 }
 
 #timer-canvas {
@@ -36,8 +37,12 @@ body {
     color: white;
     font-size: 24px;
     font-family: 'Roboto', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
     width: 100px;
-    border-style: dashed;
+    border-style:solid;
+    border-radius: 5px;
+    padding: 0.2em;
 }
 
 .button:hover {
