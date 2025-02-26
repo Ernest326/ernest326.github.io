@@ -1,0 +1,71 @@
+body {
+    background-color: darkslategray;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20vw;
+    background-color: #333;
+}
+
+#nav a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#nav a:hover {
+    text-shadow: 0 0 5px white;
+}
+
+#submit-field {
+    background-color: #333;
+    border-radius: 1em;
+    width: 30%;
+    height: 50%;
+    text-align: center;
+    align-content: center;
+    padding-bottom: 2em;
+    border-color: darkslateblue;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#submit-btn {
+    border: 2px solid black;
+    border-radius: 0.5em;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    border-style: groove;
+}
+
+#city-input {
+    border-style: groove;
+    border-radius: 0.5em;
+    margin-right: 0.2em;
+
+}
+
+#container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

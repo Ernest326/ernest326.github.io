@@ -3,13 +3,17 @@
 
 ## Introduction
 
-The objective of this assignment is to develop a web application that retrieves weather data from a local JSON file and dynamically updates the page content based on the received information. Users can input their location (city name), and the application will display relevant weather forecast details such as temperature, humidity, UV index, wind speed, etc.
+The objective of this assignment is to develop a web application that retrieves weather data from 
+a local JSON file and dynamically updates the page content based on the received information. 
+Users can input their location (city name), and the application will display relevant weather 
+forecast details such as temperature, humidity, UV index, wind speed, etc.
 
 ## Objective
 
 - Develop a web application structured into organized HTML, CSS, and JavaScript files.
 - Utilize JavaScript to fetch data from a JSON file and display it dynamically.
-- Implement CSS styles that adjust based on the user's input location, including background images, icon colors, and page appearance, reflecting the weather conditions.
+- Implement CSS styles that adjust based on the user's input location, including background images, 
+    icon colors, and page appearance, reflecting the weather conditions.
 
 ## Task Description
 

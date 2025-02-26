@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
     <title>Weather App</title>
 </head>
 <body>
-    
+    <div id="nav">
+        <a href="../index.html" id="home-btn" style="justify-self: flex-start; color: white;">HOME</a>
+        <a href="./Temperature/index.html">Temperature</a>
+        <a href="./Humidity/index.html">Humidity</a>
+        <a href="./UV/index.html">UV</a>
+        <a href="./Wind/index.html">Wind</a>
+    </div>
+    <div id="container">
+        <div id="submit-field">
+            <h1>Weather App</h1>
+            <input type="text" placeholder="City name here!" id="city-input" required>
+            <button type="submit" id="submit-btn">Submit</button>
+        </div>
+    </div>
 </body>
 </html>
