@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- HTML Boilerplate Stuff -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js"></script>
     <title>Weather App</title>
 </head>
 <body>
+    <!-- Navigation bar -->
     <div id="nav">
         <a href="../index.html" id="home-btn" style="justify-self: flex-start; color: white;">HOME</a>
         <a href="./Temperature/index.html">Temperature</a>
@@ -14,11 +17,37 @@
         <a href="./UV/index.html">UV</a>
         <a href="./Wind/index.html">Wind</a>
     </div>
+
+    <!-- Main page container -->
     <div id="container">
-        <div id="submit-field">
+
+        <!-- Submit box in middle -->
+        <div id="submit-field" style="position: relative">
             <h1>Weather App</h1>
             <input type="text" placeholder="City name here!" id="city-input" required>
-            <button type="submit" id="submit-btn">Submit</button>
+            <button type="submit" id="submit-btn" onclick="submit()">Submit</button>
+
+             <!-- Results -->
+            <div id="results">
+                <h2 id="error-msg">INVALID CITY!</h2>
+                <div id="temperature" class="result-box">
+                    <h2>Temperature: </h2>
+                    <h2 id="temp-value">0°C</h2>
+                </div>
+                <div id="humidity" class="result-box">
+                    <h2>Humidity: </h2>
+                    <h2 id="humidity-value">0%</h2>
+                </div>
+                <div id="uv" class="result-box">
+                    <h2>UV: 0W</h2>
+                    <h2 id="uv-value"></h2>
+                </div>
+                <div id="wind" class="result-box">
+                    <h2>Wind: </h2>
+                    <h2 id="wind-value">0 km/h</h2>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>

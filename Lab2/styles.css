@@ -1,18 +1,18 @@
+/* Default background */
 body {
     background-color: darkslategray;
 }
 
+/* Header Styling */
 h1 {
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
 
-input {
-    padding: 5px;
-    border-radius: 5px;
-    border: 2px solid black;
-}
+/*=================*/
+/* Nav Bar Styling */
+/*=================*/
 
 #nav {
     display: flex;
@@ -33,15 +33,29 @@ input {
     text-shadow: 0 0 5px white;
 }
 
+#container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*================================*/
+/* Submit box in middle of screen */
+/*================================*/
+
 #submit-field {
-    background-color: #333;
+    background: linear-gradient(to top, #222, #444);
     border-radius: 1em;
+    min-width: 20em;
     width: 30%;
     height: 50%;
     text-align: center;
     align-content: center;
-    padding-bottom: 2em;
-    border-color: darkslateblue;
+    padding-bottom: 4em;
+    border-color: deepskyblue;
     border-width: 2px;
     border-style: solid;
 }
@@ -58,14 +72,46 @@ input {
     border-style: groove;
     border-radius: 0.5em;
     margin-right: 0.2em;
-
+    padding: 0.5em;
 }
 
-#container {
-    width: 100%;
-    height: 80vh;
+/*=================*/
+/* Results Styling */
+/*=================*/
+
+/* Result box */
+#results {
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    left: 5%;
+    width: 90%;
+    height: 10%;
+    margin-top: 2em;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8em;
 }
+
+
+/* Result elements */
+.result-box {
+    display:flex; 
+    flex-direction: row; 
+    align-items: center; 
+    visibility: hidden; /* Hide all result elements by default */
+}
+
+#error-msg {
+    color:yellow; 
+    position:absolute; 
+    align-self: center;
+    visibility: hidden; /* Hide error message by default */
+}
+
+#results div h2 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Styling for each result element */
