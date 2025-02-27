@@ -16,9 +16,14 @@ function tryLoadValues() {
     city = sessionStorage.getItem("city");
     foundCity = sessionStorage.getItem("foundCity");
     
+    console.log(temp, humidity, uv, wind, city, foundCity);
+
     if(temp!=null&&humidity!=null&&uv!=null&&wind!=null&&city!=null&&foundCity!=null) {
-        updateElements();
-        console.log("Found data!");
+        window.addEventListener("load", () => {
+            updateElements();
+            document.getElementById("city-input").value = city;
+            document.getElementById("city-input").innerHTML = city;
+        });
     }
 }
 
@@ -88,7 +93,7 @@ function submit() {
             sessionStorage.setItem("humidity", humidity);
             sessionStorage.setItem("uv", uv);
             sessionStorage.setItem("wind", wind);
-
+            sessionStorage.setItem("foundCity", true);
             updateElements();
             
         }
@@ -108,7 +113,7 @@ function updateElements() {
     document.getElementById("uv-value").innerHTML = uv;
     document.getElementById("wind-value").innerHTML = wind;
 
-    if(foundCity==false) {
+    if(foundCity=="false") {
         document.getElementById("error-msg").style.visibility = "visible";
         Array.from(document.getElementsByClassName("result-box")).forEach((box) => box.style.visibility = "hidden");
     } else {

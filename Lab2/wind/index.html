@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wind</title>
+    <title>Wind Speed</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="../script.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Wind</h1>
+    <!-- Navigation bar -->
+    <div id="nav">
+        <a href="/Lab2/index.html" id="home-btn" style="justify-self: flex-start; color: white;">HOME</a>
+        <a href="/Lab2/temperature/index.html" id="temp-btn">Temperature</a>
+        <a href="/Lab2/humidity/index.html" id="humidity-btn">Humidity</a>
+        <a href="/Lab2/uv/index.html" id="uv-btn">UV</a>
+        <a href="/Lab2/wind/index.html" id="wind-btn">Wind</a>
+    </div>
+
+    <!-- Main page container -->
+    <div id="container">
+        <h1 id="error-msg">INVALID CITY!</h1>
+        <h1>Wind Speed:</h1>
+        <div id="menu">
+            <h1 id="city-input">City</h1>
+            <h1 id="value" style="color: rgb(187, 187, 187)">0</h1>
+            <svg viewBox="0 0 16 16" fill="white" id="icon" height="3.5em" xmlns="http://www.w3.org/2000/svg" style="padding-left:1em; padding-top: 0.5em"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13 1H11V3H13C13.5523 3 14 3.44772 14 4C14 4.55228 13.5523 5 13 5H2V7H13C14.6569 7 16 5.65685 16 4C16 2.34315 14.6569 1 13 1Z"></path> <path d="M0 11H11C11.5523 11 12 11.4477 12 12C12 12.5523 11.5523 13 11 13H9V15H11C12.6569 15 14 13.6569 14 12C14 10.3431 12.6569 9 11 9H0V11Z"></path> </g></svg>
+        </div>
+    </div>
+
 </body>
 </html>

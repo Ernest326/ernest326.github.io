@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UV</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="../script.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>UV</h1>
+    <!-- Navigation bar -->
+    <div id="nav">
+        <a href="/Lab2/index.html" id="home-btn" style="justify-self: flex-start; color: white;">HOME</a>
+        <a href="/Lab2/temperature/index.html" id="temp-btn">Temperature</a>
+        <a href="/Lab2/humidity/index.html" id="humidity-btn">Humidity</a>
+        <a href="/Lab2/uv/index.html" id="uv-btn">UV</a>
+        <a href="/Lab2/wind/index.html" id="wind-btn">Wind</a>
+    </div>
+
+    <!-- Main page container -->
+    <div id="container">
+        <h1 id="error-msg">INVALID CITY!</h1>
+        <h1>UV:</h1>
+        <div id="menu">
+            <h1 id="city-input">City</h1>
+            <h1 id="value" style="color: orange">0</h1>
+            <svg viewBox="0 0 24 24" width="4em" fill="none"xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon"></path> </g></svg>
+        </div>
+    </div>
+
 </body>
 </html>
