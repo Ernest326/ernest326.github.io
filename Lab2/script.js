@@ -12,6 +12,12 @@ function submit() {
     //Get city name
     var cityName = document.getElementById('city-input').value;
 
+    //Set new URL values for param
+    document.getElementById("temp-btn").href = "./Temperature/index.html?city="+cityName;
+    document.getElementById("humidity-btn").href = "./Humidity/index.html?city="+cityName;
+    document.getElementById("uv-btn").href = "./UV/index.html?city="+cityName;
+    document.getElementById("wind-btn").href = "./Wind/index.html?city="+cityName;
+
     //Set URL for GET request
     var req_url = "./sample.json";
     if(usingServer) {
