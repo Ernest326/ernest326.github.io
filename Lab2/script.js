@@ -1,5 +1,27 @@
 var usingServer = false;
 
+var temp=0;
+var humidity=0;
+var uv = 0;
+var wind = 0;
+var foundCity = false;
+var city = "";
+
+//Load session storage
+function tryLoadValues() {
+    temp = sessionStorage.getItem("temp");
+    humidity = sessionStorage.getItem("humidity");
+    uv = sessionStorage.getItem("uv");
+    wind = sessionStorage.getItem("wind");
+    city = sessionStorage.getItem("city");
+    foundCity = sessionStorage.getItem("foundCity");
+    
+    if(temp!=null&&humidity!=null&&uv!=null&&wind!=null&&city!=null&&foundCity!=null) {
+        updateElements();
+        console.log("Found data!");
+    }
+}
+
 //Switch to server running locally to prevent CORS error
 function useServer() {
     usingServer = true;
@@ -11,12 +33,7 @@ function submit() {
 
     //Get city name
     var cityName = document.getElementById('city-input').value;
-
-    //Set new URL values for param
-    document.getElementById("temp-btn").href = "./Temperature/index.html?city="+cityName;
-    document.getElementById("humidity-btn").href = "./Humidity/index.html?city="+cityName;
-    document.getElementById("uv-btn").href = "./UV/index.html?city="+cityName;
-    document.getElementById("wind-btn").href = "./Wind/index.html?city="+cityName;
+    sessionStorage.setItem("city", cityName);
 
     //Set URL for GET request
     var req_url = "./sample.json";
@@ -54,16 +71,26 @@ function submit() {
             //Show error message
             document.getElementById("error-msg").style.visibility = "visible";
             Array.from(document.getElementsByClassName("result-box")).forEach((box) => box.style.visibility = "hidden");
+            foundCity = false;
+            sessionStorage.setItem("foundCity", false);
         }//City found
         else {
-            //Hide error message + show results
-            document.getElementById("error-msg").style.visibility = "hidden";
-            Array.from(document.getElementsByClassName("result-box")).forEach((box) => box.style.visibility = "visible");
 
-            document.getElementById("temp-value").innerHTML = target.temperatureCelsius;
-            document.getElementById("humidity-value").innerHTML = target.humidity;
-            document.getElementById("uv-value").innerHTML = target.uvIndex;
-            document.getElementById("wind-value").innerHTML = target.windSpeed;
+            //Set values
+            temp = target.temperatureCelsius;
+            humidity = target.humidity;
+            uv = target.uvIndex;
+            wind = target.windSpeed;
+            foundCity = true;
+
+            //Set values in sessionStorage
+            sessionStorage.setItem("temp", temp);
+            sessionStorage.setItem("humidity", humidity);
+            sessionStorage.setItem("uv", uv);
+            sessionStorage.setItem("wind", wind);
+
+            updateElements();
+            
         }
 
     
@@ -72,3 +99,23 @@ function submit() {
         alert("Error! Cannot fetch data!\n\nERROR: " + err);
     });
 }
+
+//Update element values
+function updateElements() {
+
+    document.getElementById("temp-value").innerHTML = temp;
+    document.getElementById("humidity-value").innerHTML = humidity;
+    document.getElementById("uv-value").innerHTML = uv;
+    document.getElementById("wind-value").innerHTML = wind;
+
+    if(foundCity==false) {
+        document.getElementById("error-msg").style.visibility = "visible";
+        Array.from(document.getElementsByClassName("result-box")).forEach((box) => box.style.visibility = "hidden");
+    } else {
+        //Hide error message + show results
+        document.getElementById("error-msg").style.visibility = "hidden";
+        Array.from(document.getElementsByClassName("result-box")).forEach((box) => box.style.visibility = "visible");
+    }
+}
+
+tryLoadValues();

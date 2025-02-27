@@ -1,4 +1,4 @@
-var time = 61
+var time = 70
 var timer_running = false;
 
 function pauseTimer() {
