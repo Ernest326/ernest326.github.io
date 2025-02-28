@@ -3,6 +3,8 @@ var degC = true;
 function updateElements() {
     console.log("Update!");
 
+    document.getElementById("bg").src = "../img/"+city+".jpg";
+    
     if(degC) {
         document.getElementById("value").innerHTML = temp + "°C";
     } else {

@@ -1,7 +1,7 @@
 function updateElements() {
     console.log("Update!");
     document.getElementById("value").innerHTML = wind;
-
+    document.getElementById("bg").src = "../img/"+city+".jpg";
     //Dynamic web part
     if(wind.substring(0, wind.length-2) > 20) {
         document.getElementById("icon").style.fill = "red";

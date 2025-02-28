@@ -1,5 +1,7 @@
 function updateElements() {
     console.log("Update!");
+
+    document.getElementById("bg").src = "../img/"+city+".jpg";
     document.getElementById("value").innerHTML = humidity;
 
     //Dynamic web part

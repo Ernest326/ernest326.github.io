@@ -1,7 +1,7 @@
 function updateElements() {
     console.log("Update!");
     document.getElementById("value").innerHTML = uv;
-
+    document.getElementById("bg").src = "../img/"+city+".jpg";
     //Dynamic web part
     if(uv > 10) {
         document.getElementById("icon").style.stroke = "red";

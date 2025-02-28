@@ -1,6 +1,7 @@
 /* Default background */
 body {
     background-color: darkslategray;
+    overflow: hidden;
 }
 
 /* Header Styling */
